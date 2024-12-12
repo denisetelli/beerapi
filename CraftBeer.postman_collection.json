@@ -1,0 +1,206 @@
+{
+	"info": {
+		"_postman_id": "05f41027-b4b1-45b7-b105-ad433c0a5591",
+		"name": "CraftBeer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11667380"
+	},
+	"item": [
+		{
+			"name": "Adicionar cerveja 1",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"alcVol\": 4.5,\r\n  \"brewery\": \"Seasons\",\r\n  \"ml\": 350.0,\r\n  \"name\": \"Holicow\",\r\n    \"price\": 12.0,\r\n  \"style\": \"BELGIAN\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/beer-catalog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"beer-catalog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar cerveja 2",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"alcVol\": 6.8,\r\n  \"brewery\": \"Seasons\",\r\n  \"ml\": 350.0,\r\n  \"name\": \"Green cow\",\r\n  \"price\": 12.0,\r\n  \"style\": \"IPA\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/beer-catalog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"beer-catalog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Adicionar cerveja 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"alcVol\": 3.4,\r\n  \"brewery\": \"Seasons\",\r\n  \"ml\": 350.0,\r\n  \"name\": \"Tilt\",\r\n  \"price\": 11.0,\r\n  \"style\": \"WITBIER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/beer-catalog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"beer-catalog"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar cerveja 2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"alcVol\": 4.5,\r\n  \"brewery\": \"Seasons\",\r\n  \"ml\": 350.0,\r\n  \"name\": \"Holicow\",\r\n    \"price\": 12.0,\r\n  \"style\": \"LAGER\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:9000/beer-catalog?id=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"beer-catalog"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remover cerveja 3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/beer-catalog?id=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"beer-catalog"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar cerveja 1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/beer-catalog/beer?id=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"beer-catalog",
+						"beer"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Buscar cervejas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:9000/beer-catalog/beers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9000",
+					"path": [
+						"beer-catalog",
+						"beers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
